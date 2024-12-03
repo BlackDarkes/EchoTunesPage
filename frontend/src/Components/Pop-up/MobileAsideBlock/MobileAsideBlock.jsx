@@ -39,7 +39,7 @@ const MobileAsideBlock = ({home, library, active}) => {
                         <Link className={[home].join(" ")} to="/">
                             <Button image={<Home/>} text={"Главная"} />
                         </Link>
-                        <Link className={[library].join(" ")} to="/playlists">
+                        <Link className={[library].join(" ")} to="/EchoTunesPage/playlists">
                             <Button image={<Labrary/>} text={"Библиотека"}/>
                         </Link>
                     </div>

@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PlaylistPage from "./Pages/PlayListPage/Playlist";
 import PlaylistMusic from "./Pages/PlaylistMusic/PlaylistMusic";
 import MusicBar from "./Components/MusicBar/MusicBar";
+import PageNotFound from "./Pages/PageNotFound/PageNotFound";
 
 const router = createBrowserRouter([
   {
@@ -12,19 +13,23 @@ const router = createBrowserRouter([
     element: <EchoTunes/>
   },
   {
-    path: "/playlists",
+    path: "/EchoTunesPage/playlists",
     element: <PlaylistPage/>
   },
   {
-    path: "/playlists/music/:number",
+    path: "/EchoTunesPage/playlists/music/:number", // Убедитесь, что этот путь правильный
     element: <PlaylistMusic/>
+  },
+  {
+    path: "*", // Этот маршрут должен быть последним
+    element: <PageNotFound/> 
   }
-]);
+], { basename: "/EchoTunesPage" });
 
 function App() {
   return (
     <div className="App">
-      <RouterProvider router={router}/>
+      <RouterProvider router={router} />
       <MusicBar/>
     </div>
   );
