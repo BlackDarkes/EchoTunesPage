@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/EchoTunesPage/static/css/main.991fbbbe.css",
-    "main.js": "/EchoTunesPage/static/js/main.13fe754a.js",
+    "main.css": "/EchoTunesPage/static/css/main.5be1713f.css",
+    "main.js": "/EchoTunesPage/static/js/main.7c174381.js",
     "static/media/tk-from-film-a-moment.mp3": "/EchoTunesPage/static/media/tk-from-film-a-moment.dd6bd443b8238daadd37.mp3",
     "static/media/queen-radio-ga-ga.mp3": "/EchoTunesPage/static/media/queen-radio-ga-ga.a23bb6bb0630afcbe177.mp3",
     "static/media/tk from signal.mp3": "/EchoTunesPage/static/media/tk from signal.88615efa788fe64a1b68.mp3",
@@ -14,11 +14,11 @@
     "static/media/russian-doomer-chernikovskaia-khata-iabloki-na-snegu.mp3": "/EchoTunesPage/static/media/russian-doomer-chernikovskaia-khata-iabloki-na-snegu.1c959fd2285ef1a4b234.mp3",
     "static/media/КартинкаМузыки.svg": "/EchoTunesPage/static/media/КартинкаМузыки.538134e90356f13285bbd3f18ff6a9bd.svg",
     "index.html": "/EchoTunesPage/index.html",
-    "main.991fbbbe.css.map": "/EchoTunesPage/static/css/main.991fbbbe.css.map",
-    "main.13fe754a.js.map": "/EchoTunesPage/static/js/main.13fe754a.js.map"
+    "main.5be1713f.css.map": "/EchoTunesPage/static/css/main.5be1713f.css.map",
+    "main.7c174381.js.map": "/EchoTunesPage/static/js/main.7c174381.js.map"
   },
   "entrypoints": [
-    "static/css/main.991fbbbe.css",
-    "static/js/main.13fe754a.js"
+    "static/css/main.5be1713f.css",
+    "static/js/main.7c174381.js"
   ]
 }
