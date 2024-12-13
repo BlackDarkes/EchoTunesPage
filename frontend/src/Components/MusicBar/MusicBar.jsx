@@ -15,34 +15,25 @@ import NextMusic from "../AssetsBlocks/MusicBar/NavigationMusic/NextMusic";
 import RepeatMusic from "../AssetsBlocks/MusicBar/NavigationMusic/ReapeatMusic";
 import AddPlaylist from "../AssetsBlocks/MusicBar/Sound/AddPlaylist";
 import { MusicsContents } from "../../Contents/MusicsContents/MusicsContents";
+import Navigation from "./Block/Navigation/Navigation";
 
 const MusicBar = () => {
-    const {play, setPlay} = useContext(MusicsContents);
-    const [valueSound, setValueSound] = useState(0.30);
+    const defaultVolume = 0.5;
+    const count = localStorage.getItem("value");
+
+    const { play, setPlay } = useContext(MusicsContents);
+    const [valueSound, setValueSound] = useState(count ? Number(count) : defaultVolume);
     const { index, setIndex } = useContext(MusicsContents);
     const [track, setTrack] = useState(new Audio(musics[index].music));
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
-    const [offset, setOffset] = useState(0);
     const textRef = useRef(null);
     const containerRef = useRef(null);
+    const [vision, setVision] = useState(false);
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            if (textRef.current && containerRef.current) {
-                const textWidth = textRef.current.offsetWidth;
-
-                setOffset(prevOffset => {
-                    if (prevOffset <= -textWidth) {
-                        return 0; 
-                    }
-                    return prevOffset - 1;
-                });
-            }
-        }, 50);
-
-        return () => clearInterval(interval);
-    }, []);
+        localStorage.setItem("value", valueSound);
+    }, [valueSound]);
 
     useEffect(() => {
         const newTrack = new Audio(musics[index].music);
@@ -134,42 +125,49 @@ const MusicBar = () => {
     };
 
     return (
-        <section className="musicBar">
-            <input style={{cursor: "pointer"}}
-                type="range"
-                className="musicBar__progress"
-                min="0"
-                step="0.05"
-                max={duration}
-                value={currentTime}
-                onChange={handleTimeChange}/>
-            <div className="musicBar__block">
-                <div className="bar">
-                <div className="bar-info">
-                <p className="bar-info__time">
-                    <span className="start-time">{formatTime(currentTime)}</span> / <span className="full-time">{formatTime(duration)}</span>
-                </p>
-                <div ref={containerRef} className="bar-info__name" style={{ overflow: 'hidden', whiteSpace: 'nowrap', position: 'relative', width: "250px" }}>
-                    <span ref={textRef} style={{ position: 'absolute', left: `${offset}px`, transition: 'left 0.1s linear' }}>
-                        {musics[index].name} / {musics[index].author} &nbsp; &nbsp;
-                    </span>
-                    <span style={{ position: 'absolute', left: `${offset + textRef.current?.offsetWidth}px`, transition: 'left 0.1s linear' }}>
-                        {musics[index].name} / {musics[index].author} &nbsp; &nbsp;
-                    </span>
-                </div>
-            </div>
+        <>
+            <section className="musicBar" onClick={() => setVision(!vision)}>
+                <input style={{cursor: "pointer"}}
+                    type="range"
+                    className="musicBar__progress"
+                    min="0"
+                    step="0.05"
+                    max={duration}
+                    value={currentTime}
+                    onChange={handleTimeChange}/>
+                <div className="musicBar__block">
+                    <div className="bar">
+                        <div className="bar-info">
+                        <p className="bar-info__time">
+                            <span className="start-time">{formatTime(currentTime)}</span> / <span className="full-time">{formatTime(duration)}</span>
+                        </p>
+                        <div ref={containerRef} className="bar-info__name" style={{ overflow: 'hidden', whiteSpace: 'nowrap', position: 'relative', width: "250px" }}>
+                            <span ref={textRef}>
+                                {musics[index].name} / {musics[index].author} &nbsp; &nbsp;
+                            </span>
+                        </div>
+                    </div>
                     <div className="bar-nav">
                         <button type="button" className="bar-nav__randomMusic">
                             <RandomMusic/>
                         </button>
                         <div className="navigation">
-                            <button type="button" className="navigation__previous navigation__button" onClick={lastTrack}>
+                            <button type="button" className="navigation__previous navigation__button" onClick={(e) => {
+                                e.stopPropagation();
+                                lastTrack();
+                            }}>
                                 <BackMusic/>
                             </button>
-                            <button type="button" className="navigation__play navigation__button" onClick={togglePlayPause}>
+                            <button type="button" className="navigation__play navigation__button" onClick={(e) => {
+                                e.stopPropagation();
+                                togglePlayPause();
+                            }}>
                                 {play ? <StopMusic/> : <PlayMusic/>}
                             </button>
-                            <button type="button" className="navigation__next navigation__button" onClick={nextTrack}>
+                            <button type="button" className="navigation__next navigation__button" onClick={(e) => {
+                                e.stopPropagation();
+                                nextTrack();
+                            }}>
                                 <NextMusic/>
                             </button>
                         </div>
@@ -202,7 +200,21 @@ const MusicBar = () => {
                     </div>
                 </div>
             </div>
+
         </section>
+        <Navigation 
+            vision={vision}
+            setVision={setVision}
+            index={index}
+            duration={duration}
+            currentTime={currentTime}
+            handleTimeChange={handleTimeChange}
+            formatTime={formatTime}
+            lastTrack={lastTrack}
+            togglePlayPause={togglePlayPause}
+            play={play}
+            nextTrack={nextTrack}/>
+        </>
     );
 }
  

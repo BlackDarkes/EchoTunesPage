@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.16ff47fb.css",
-    "main.js": "/static/js/main.924a4dd9.js",
+    "main.css": "/static/css/main.4645257a.css",
+    "main.js": "/static/js/main.3202b169.js",
     "static/media/tk-from-film-a-moment.mp3": "/static/media/tk-from-film-a-moment.dd6bd443b8238daadd37.mp3",
     "static/media/queen-radio-ga-ga.mp3": "/static/media/queen-radio-ga-ga.a23bb6bb0630afcbe177.mp3",
     "static/media/tk from signal.mp3": "/static/media/tk from signal.88615efa788fe64a1b68.mp3",
@@ -14,11 +14,11 @@
     "static/media/russian-doomer-chernikovskaia-khata-iabloki-na-snegu.mp3": "/static/media/russian-doomer-chernikovskaia-khata-iabloki-na-snegu.1c959fd2285ef1a4b234.mp3",
     "static/media/КартинкаМузыки.svg": "/static/media/КартинкаМузыки.bcbdf15ed3ea0462b64cb4a1e6334a2f.svg",
     "index.html": "/index.html",
-    "main.16ff47fb.css.map": "/static/css/main.16ff47fb.css.map",
-    "main.924a4dd9.js.map": "/static/js/main.924a4dd9.js.map"
+    "main.4645257a.css.map": "/static/css/main.4645257a.css.map",
+    "main.3202b169.js.map": "/static/js/main.3202b169.js.map"
   },
   "entrypoints": [
-    "static/css/main.16ff47fb.css",
-    "static/js/main.924a4dd9.js"
+    "static/css/main.4645257a.css",
+    "static/js/main.3202b169.js"
   ]
 }
