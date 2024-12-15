@@ -1,0 +1,26 @@
+@import "../../../style/App.scss";
+
+.playlistBlock {
+    &__block {
+        .playlist {
+            display: flex;
+            gap: 75px 150px;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+
+            &__add {
+                color: var(--white);
+                width: 100px;
+                height: 100px;
+            }
+
+            // @include mobile() {
+            //     justify-content: space-between;
+            //     gap: 50px;
+            //     padding-inline: 40px;
+            // }
+        }
+
+    }
+}

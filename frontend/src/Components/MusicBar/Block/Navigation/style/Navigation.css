@@ -227,7 +227,7 @@ img {
 }
 
 .navigation-popup {
-  position: absolute;
+  position: fixed;
   inset: 0;
   height: 100vh;
   width: 100vw;
@@ -240,7 +240,7 @@ img {
           user-select: none;
   opacity: 0;
   z-index: 400;
-  transition: 0.4s;
+  transition: 0.7s;
 }
 .navigation-popup__block {
   width: 100%;
@@ -342,8 +342,8 @@ img {
 }
 @media (max-width: 600px) {
   .navigation-popup__block .navigation-buttons .buttons__previous {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
   }
 }
 .navigation-popup__block .navigation-buttons .buttons__play {
@@ -354,8 +354,8 @@ img {
 }
 @media (max-width: 600px) {
   .navigation-popup__block .navigation-buttons .buttons__next {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
   }
 }
 @media (max-width: 600px) {
@@ -389,6 +389,6 @@ img {
     transform: translateY(0);
     opacity: 1;
     pointer-events: painted;
-    transition: 0.4s;
+    transition: 0.7s;
   }
 }/*# sourceMappingURL=Navigation.css.map */

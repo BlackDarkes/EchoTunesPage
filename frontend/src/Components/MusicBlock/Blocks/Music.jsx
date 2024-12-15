@@ -9,24 +9,24 @@ import { MusicsContents } from "../../../Contents/MusicsContents/MusicsContents"
 
 const Music = ({ musicName, author, id }) => {
     const { index, setIndex, play, setPlay } = useContext(MusicsContents);
-    const isPlaying = index === id && play; // Проверяем, играет ли текущая музыка
+    const isPlaying = index === id && play;
 
     const togglePlay = () => {
         if (isPlaying) {
-            // Если музыка уже играет, ставим на паузу
+
             setPlay(false);
         } else {
-            // Если текущая музыка не равна новой, останавливаем текущую
+
             if (index !== id) {
-                setPlay(false); // Останавливаем текущую музыку
-                setIndex(id); // Устанавливаем текущий трек
-                // Используем setTimeout, чтобы дать время предыдущей музыке остановиться
+                setPlay(false);
+                setIndex(id);
+
                 setTimeout(() => {
-                    setPlay(true); // Устанавливаем play в true, чтобы начать воспроизведение
+                    setPlay(true);
                     console.log(`Playing: ${musicName}`);
-                }, 100); // Задержка в 100 мс, чтобы убедиться, что предыдущая музыка остановилась
+                }, 100);
             } else {
-                setPlay(true); // Устанавливаем play в true, чтобы начать воспроизведение
+                setPlay(true);
                 console.log(`Playing: ${musicName}`);
             }
         }
@@ -34,7 +34,7 @@ const Music = ({ musicName, author, id }) => {
 
     const stopMusic = () => {
         setPlay(false);
-        setIndex(undefined); // Устанавливаем индекс в undefined, чтобы остановить воспроизведение
+        setIndex(undefined);
     };
 
     return (

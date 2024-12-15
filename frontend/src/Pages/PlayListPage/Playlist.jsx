@@ -1,6 +1,7 @@
 import AsideBlock from "../../Components/AsideBlock/AsideBlock";
 import AsideBlockMobile from "../../Components/Mobile-blocks/AsideBlockMobile/AsideBlockMobile";
 import HeaderMobile from "../../Components/Mobile-blocks/HeaderMobile/HeaderMobile";
+import PlaylistBlock from "../../Components/PlaylistBlock/PlaylistBlock";
 import ProfilUser from "../../Components/ProfilUser/ProfilUser";
 import SerchBar from "../../Components/SerchPanel/SearchBar";
 
@@ -15,6 +16,9 @@ const PlaylistPage = () => {
                     <ProfilUser/>
                 </header>
                 <HeaderMobile home="aside-navigation__button" library="aside-navigation__button active"/>
+                <main className="playlist">
+                    <PlaylistBlock/>
+                </main>
             </section>
         </div>
     );
