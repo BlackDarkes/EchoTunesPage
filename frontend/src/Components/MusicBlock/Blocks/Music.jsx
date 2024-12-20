@@ -52,11 +52,11 @@ const Music = ({ musicName, author, id }) => {
     return (
         <section className="music-block" onClick={startPlayMobile}>
             <div className="block-info">
-                <button type="button" className="block-info__playPause" onClick={stratPlayDesctop}>
+                <button type="button" className="block-info__playPause" onClick={togglePlay}>
                     {isPlaying ? <StopMusic onClick={stopMusic} /> : <PlayMusic />}
                 </button>
                 <img src={musicImage} alt="картинка музыки" className="block-info__image" width={40} height={40} />
-                <button type="button" className="block-info__playPause-tabs" onClick={togglePlay}>
+                <button type="button" className="block-info__playPause-tabs" onClick={stratPlayDesctop}>
                     {isPlaying ? <StopMusic onClick={stopMusic}/> : <img src={musicImage} alt="картинка музыки" className="image" width={40} height={40} />}
                 </button>
                 <p className="block-text">

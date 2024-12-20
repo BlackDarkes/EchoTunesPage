@@ -1,0 +1,9 @@
+@import "../../../style/App.scss";
+
+.echoTunes {
+    &__blocks {
+        .playlist {
+            height: 100%;
+        }
+    }
+}

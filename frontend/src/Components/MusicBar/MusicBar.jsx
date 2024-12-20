@@ -148,7 +148,9 @@ const MusicBar = () => {
                         </div>
                     </div>
                     <div className="bar-nav">
-                        <button type="button" className="bar-nav__randomMusic">
+                        <button type="button" className="bar-nav__randomMusic" onClick={(e) => {
+                            e.stopPropagation();
+                        }}>
                             <RandomMusic/>
                         </button>
                         <div className="navigation">
@@ -176,11 +178,14 @@ const MusicBar = () => {
                         </button>
                     </div>
                     <div className="bar-sound">
-                        <button type="button" className="bar-sound__addPlaylist">
+                        <button type="button" className="bar-sound__addPlaylist" onClick={(e) => {
+                            e.stopPropagation();
+                        }}>
                             <AddPlaylist/>
                         </button>
                         <div className="sound">
-                            <button type="button" className="sound__image" onClick={() => {
+                            <button type="button" className="sound__image" onClick={(e) => {
+                                e.stopPropagation()
                                 valueSound >= 0.01 ? setValueSound(0) : setValueSound(0.30)
                             }}>
                                 {valueSound === 0 ? <NotSound/> : ""}

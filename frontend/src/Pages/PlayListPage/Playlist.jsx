@@ -4,6 +4,7 @@ import HeaderMobile from "../../Components/Mobile-blocks/HeaderMobile/HeaderMobi
 import PlaylistBlock from "../../Components/PlaylistBlock/PlaylistBlock";
 import ProfilUser from "../../Components/ProfilUser/ProfilUser";
 import SerchBar from "../../Components/SerchPanel/SearchBar";
+import "./style/Playlist.css"
 
 const PlaylistPage = () => {
     return (

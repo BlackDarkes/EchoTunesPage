@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./style/AsudeBlock.css";
 import Button from "../Blocks/Button/Button";
@@ -6,9 +7,10 @@ import Home from "../AssetsBlocks/AsideBlock/Home";
 import Labrary from "../AssetsBlocks/AsideBlock/Labrary";
 import New from "../AssetsBlocks/AsideBlock/New";
 import AddPlaylist from "../Pop-up/AddPlaylist/AddPlaylist";
+import { PlaylistContext } from "../../Contents/MusicsContents/AddPlaylistContext";
 
 const AsideBlock = ({home, library}) => {
-    const [open, setOpen] = useState(false);
+    const { open, setOpen } = useContext(PlaylistContext)
 
     useEffect(() => {
         document.addEventListener("click", (event) => {
@@ -28,7 +30,7 @@ const AsideBlock = ({home, library}) => {
                 };
             });
         }
-    }, [open])
+    }, [])
 
     return ( 
         <>

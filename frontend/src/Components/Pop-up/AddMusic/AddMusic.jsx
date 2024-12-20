@@ -10,9 +10,9 @@ const AddMusic = ({open, setOpen}) => {
                     <button type="button" className="add__close" onClick={() => setOpen(false)}><BurgerClose/></button>
                     <form action="" className="add-form">
                         <div className="add-textblock">
-                            <input type="text" className="add-textblock__track" placeholder="Название трека" maxLength={50} required/>
-                            <input className="add-textblock__author" placeholder="Имя автора" maxLength={50} required/>
-                            <input type="submit" className="add-textblock__enter" value="Сохранить" />
+                            <input type="text" id="name-tarack" name="name-tarack" className="add-textblock__track" placeholder="Название трека" maxLength={50} required/>
+                            <input type="text" id="name-author" name="name-author" className="add-textblock__author" placeholder="Имя автора" maxLength={50} required/>
+                            <input type="submit" id="save" name="save" className="add-textblock__enter" value="Сохранить" />
                         </div>
                         <div className="add-downloadMusic">
                             <label htmlFor="downloadMusic" className="downloadMusic-block">

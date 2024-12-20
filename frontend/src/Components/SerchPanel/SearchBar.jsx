@@ -11,7 +11,7 @@ const SerchBar = () => {
             <div className="serchBar__block">
                 <div className="serch">
                     <div className="serch-block">
-                        <input type="text" className="serch-block__input" placeholder="Название трека" onChange={(event) => setValue(event.target.value)}/>
+                        <input type="text" id="serch" name="serch" className="serch-block__input" placeholder="Название трека" onChange={(event) => setValue(event.target.value)}/>
                         <button type="button" className="serch-block__button">
                             <Serch/>
                         </button>
