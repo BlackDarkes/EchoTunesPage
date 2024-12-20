@@ -3,7 +3,7 @@ import { musics } from "../Music/musics"
 const playlistsData = [
     {
         img: require("../Assets/Secondary/PlayListBlock/КартинкаПлейлиста.png"),
-        name: "Name",
+        name: "Name1",
         about: "About",
         music: [
             musics[0],
@@ -13,7 +13,7 @@ const playlistsData = [
     },
     {
         img: require("../Assets/Secondary/PlayListBlock/КартинкаПлейлиста.png"),
-        name: "Name",
+        name: "Name2",
         about: "About",
         music: [
             musics[0],
@@ -23,7 +23,7 @@ const playlistsData = [
     },
     {
         img: require("../Assets/Secondary/PlayListBlock/КартинкаПлейлиста.png"),
-        name: "Name",
+        name: "Name3",
         about: "About",
         music: [
             musics[0],
@@ -33,7 +33,7 @@ const playlistsData = [
     },
     {
         img: require("../Assets/Secondary/PlayListBlock/КартинкаПлейлиста.png"),
-        name: "Name",
+        name: "Name4",
         about: "About",
         music: [
             musics[0],
@@ -43,7 +43,7 @@ const playlistsData = [
     },
     {
         img: require("../Assets/Secondary/PlayListBlock/КартинкаПлейлиста.png"),
-        name: "Name",
+        name: "Name5",
         about: "About",
         music: [
             musics[0],
@@ -53,7 +53,7 @@ const playlistsData = [
     },
     {
         img: require("../Assets/Secondary/PlayListBlock/КартинкаПлейлиста.png"),
-        name: "Name",
+        name: "Name6",
         about: "About",
         music: [
             musics[0],
@@ -63,7 +63,7 @@ const playlistsData = [
     },
     {
         img: require("../Assets/Secondary/PlayListBlock/КартинкаПлейлиста.png"),
-        name: "Name",
+        name: "Name7",
         about: "About",
         music: [
             musics[0],
@@ -73,7 +73,7 @@ const playlistsData = [
     },
     {
         img: require("../Assets/Secondary/PlayListBlock/КартинкаПлейлиста.png"),
-        name: "Name",
+        name: "Name8",
         about: "About",
         music: [
             musics[0],
@@ -83,7 +83,7 @@ const playlistsData = [
     },
     {
         img: require("../Assets/Secondary/PlayListBlock/КартинкаПлейлиста.png"),
-        name: "Name",
+        name: "Name9",
         about: "About",
         music: [
             musics[0],
@@ -93,7 +93,7 @@ const playlistsData = [
     },
     {
         img: require("../Assets/Secondary/PlayListBlock/КартинкаПлейлиста.png"),
-        name: "Name",
+        name: "Name10",
         about: "About",
         music: [
             musics[0],
@@ -103,7 +103,7 @@ const playlistsData = [
     },
     {
         img: require("../Assets/Secondary/PlayListBlock/КартинкаПлейлиста.png"),
-        name: "Name",
+        name: "Name11",
         about: "About",
         music: [
             musics[0],
@@ -113,7 +113,7 @@ const playlistsData = [
     },
     {
         img: require("../Assets/Secondary/PlayListBlock/КартинкаПлейлиста.png"),
-        name: "Name",
+        name: "Name12",
         about: "About",
         music: [
             musics[0],
@@ -123,7 +123,7 @@ const playlistsData = [
     },
     {
         img: require("../Assets/Secondary/PlayListBlock/КартинкаПлейлиста.png"),
-        name: "Name",
+        name: "very very very very very very large",
         about: "About",
         music: [
             musics[0],

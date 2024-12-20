@@ -62,7 +62,6 @@ const AsideBlock = ({home, library}) => {
             </div>
         </aside>
         <AddPlaylist open={open} setOpen={setOpen}/>
-
         </>
     );
 }

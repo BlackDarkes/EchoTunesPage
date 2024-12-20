@@ -244,7 +244,7 @@ img {
     height: 30px;
   }
 }
-@media (max-width: 837px) {
+@media (max-width: 834px) {
   .profilUser__block .profil__image {
     width: 23px;
     height: 23px;

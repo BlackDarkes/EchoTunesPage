@@ -7,11 +7,11 @@ import AddPlaylist from "./Assets/AddPlaylist";
 
 const PlaylistBlock = () => {
     const generatePlaylist = playlists.map((elem, index) => {
-        return <Playlist key={playlists[index].id} image={playlists[index].img} name={playlists[index].name}/>
+        return <Playlist key={playlists[index].id} image={playlists[index].img} name={playlists[index].name} index={playlists[index].id}/>
     })
     
     return (
-        <div className="playlistBlock">
+        <div className="playlistBlock" >
             <div className="playlistBlock__block">
                 <div className="playlist">
                     <button type="button" className="playlist__add"><AddPlaylist/></button>

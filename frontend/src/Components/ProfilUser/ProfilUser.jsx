@@ -9,8 +9,8 @@ const ProfilUser = () => {
     return (
         <div className="profilUser">
             <div className="profilUser__block">
-                <div className="profil">
-                    <button type="profil__button" onClick={() => setVision(!vision)}>
+                <div className="profil" onClick={() => setVision(!vision)} style={{cursor: "pointer"}}>
+                    <button type="profil__button" >
                         <UserImage/>
                     </button>
                 </div>

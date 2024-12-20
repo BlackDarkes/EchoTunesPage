@@ -15,12 +15,29 @@
                 height: 100px;
             }
 
-            // @include mobile() {
-            //     justify-content: space-between;
-            //     gap: 50px;
-            //     padding-inline: 40px;
-            // }
-        }
+            &-block {
+                color: var(--white);
 
+                &__button {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 25px;
+                    width: 100px;
+                }
+
+                &__name {
+                    width: 100px;
+                    text-align: center;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+            }
+
+            @include tabs() {
+                justify-content: space-between;
+                column-gap: 70px;
+            }
+        }
     }
 }

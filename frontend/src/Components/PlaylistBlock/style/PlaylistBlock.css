@@ -237,4 +237,27 @@ img {
   color: var(--white);
   width: 100px;
   height: 100px;
+}
+.playlistBlock__block .playlist-block {
+  color: var(--white);
+}
+.playlistBlock__block .playlist-block__button {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  width: 100px;
+}
+.playlistBlock__block .playlist-block__name {
+  width: 100px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@media (max-width: 834px) {
+  .playlistBlock__block .playlist {
+    justify-content: space-between;
+    -moz-column-gap: 70px;
+         column-gap: 70px;
+  }
 }/*# sourceMappingURL=PlaylistBlock.css.map */

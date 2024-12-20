@@ -37,10 +37,22 @@ const Music = ({ musicName, author, id }) => {
         setIndex(undefined);
     };
 
+    const stratPlayDesctop = () => {
+        if (window.innerWidth > 834) {
+            togglePlay();
+        } 
+    }
+
+    const startPlayMobile = () => {
+        if (window.innerWidth <= 834) {
+            togglePlay();
+        }
+    }
+
     return (
-        <section className="music-block">
+        <section className="music-block" onClick={startPlayMobile}>
             <div className="block-info">
-                <button type="button" className="block-info__playPause" onClick={togglePlay}>
+                <button type="button" className="block-info__playPause" onClick={stratPlayDesctop}>
                     {isPlaying ? <StopMusic onClick={stopMusic} /> : <PlayMusic />}
                 </button>
                 <img src={musicImage} alt="картинка музыки" className="block-info__image" width={40} height={40} />
@@ -58,7 +70,9 @@ const Music = ({ musicName, author, id }) => {
                     <button type="button" className="block-button__delete block-button__button"><DeleteMusic /></button>
                 </div>
                 <p className="block-time">0:00/3:30</p>
-                <button type="button" className="block-button__3points"><ThreePoints /></button>
+                <button type="button" className="block-button__3points" onClick={(e) => {
+                    e.stopPropagation()
+                }}><ThreePoints /></button>
             </div>
         </section>
     );
