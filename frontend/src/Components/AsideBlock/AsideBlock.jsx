@@ -7,7 +7,9 @@ import Home from "../AssetsBlocks/AsideBlock/Home";
 import Labrary from "../AssetsBlocks/AsideBlock/Labrary";
 import New from "../AssetsBlocks/AsideBlock/New";
 import AddPlaylist from "../Pop-up/AddPlaylist/AddPlaylist";
-import { PlaylistContext } from "../../Contents/MusicsContents/AddPlaylistContext";
+import { PlaylistContext } from "../../Contents/AddPlaylistContext";
+import { playlists } from "../../Playlists/playlists";
+import GeneratPlaylist from "./block/GeneratPlaylist";
 
 const AsideBlock = ({home, library}) => {
     const { open, setOpen } = useContext(PlaylistContext)
@@ -21,6 +23,8 @@ const AsideBlock = ({home, library}) => {
             };
         });
 
+
+
         return () => {
             document.removeEventListener("click", (event) => {
                 const newPlaylist = event.target.closest(".aside-playlist__new");
@@ -31,6 +35,10 @@ const AsideBlock = ({home, library}) => {
             });
         }
     }, [])
+
+    const generatePlaylist = playlists.map((elem, index) => {
+        return <GeneratPlaylist key={playlists[index].id} name={playlists[index].name} index={playlists[index].id}/>
+    })
 
     return ( 
         <>
@@ -51,13 +59,7 @@ const AsideBlock = ({home, library}) => {
                         <Button image={<New/>} text={"Новый"} classBlock={"aside-playlist__new"} />
 
                         <section className="playlist-block">
-                        <Link className="playlist-block__playlists" to="/playlists/music/1"><p className="playlist-block__text">Созданный плейлист...</p></Link>
-                            <Link className="playlist-block__playlists" to="/playlists/music/2"><p className="playlist-block__text">Созданный плейлист...</p></Link>
-                            <Link className="playlist-block__playlists" to="/playlists/music/3"><p className="playlist-block__text">Созданный плейлист...</p></Link>
-                            <Link className="playlist-block__playlists" to="/playlists/music/4"><p className="playlist-block__text">Созданный плейлист...</p></Link>
-                            <Link className="playlist-block__playlists" to="/playlists/music/5"><p className="playlist-block__text">Созданный плейлист...</p></Link>
-                            <Link className="playlist-block__playlists" to="/playlists/music/6"><p className="playlist-block__text">Созданный плейлист...</p></Link>
-                            <Link className="playlist-block__playlists" to="/playlists/music/7"><p className="playlist-block__text">Созданный плейлист...</p></Link>
+                            {generatePlaylist}
                         </section>
                     </div>
                 </div>

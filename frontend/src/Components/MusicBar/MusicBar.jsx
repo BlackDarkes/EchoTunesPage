@@ -14,7 +14,7 @@ import RandomMusic from "../AssetsBlocks/MusicBar/NavigationMusic/RandomMusic";
 import NextMusic from "../AssetsBlocks/MusicBar/NavigationMusic/NextMusic";
 import RepeatMusic from "../AssetsBlocks/MusicBar/NavigationMusic/ReapeatMusic";
 import AddPlaylist from "../AssetsBlocks/MusicBar/Sound/AddPlaylist";
-import { MusicsContents } from "../../Contents/MusicsContents/MusicsContents";
+import { MusicsContents } from "../../Contents/MusicsContents";
 import Navigation from "./Block/Navigation/Navigation";
 
 const MusicBar = () => {

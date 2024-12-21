@@ -5,8 +5,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PlaylistPage from "./Pages/PlayListPage/Playlist";
 import PlaylistMusic from "./Pages/PlaylistMusic/PlaylistMusic";
 import MusicBar from "./Components/MusicBar/MusicBar";
-import MusicProvider from "./Contents/MusicsContents/MusicsContents"; // Импортируйте ваш провайдер
-import PlaylistProvider from "./Contents/MusicsContents/AddPlaylistContext";
+import MusicProvider from "./Contents/MusicsContents"; // Импортируйте ваш провайдер
+import PlaylistProvider from "./Contents/AddPlaylistContext";
+import PageNotFound from "./Pages/PageNotFound/PageNotFoun";
 
 const router = createBrowserRouter([
   {
@@ -18,8 +19,12 @@ const router = createBrowserRouter([
     element: <PlaylistPage/>
   },
   {
-    path: "/playlists/music/:number",
+    path: "/playlists/music/:index",
     element: <PlaylistMusic/>
+  },
+  {
+    path: "*",
+    element: <PageNotFound/>
   }
 ], {
   future: {

@@ -69,7 +69,7 @@
             &-playlist {
                 @include flex-vertical();
                 row-gap: 50px;
-                padding: 50px 0 0 40px;
+                padding: 50px 10px 0 40px;
 
                 &__new {
                     @include flex-center-vertical();
@@ -100,7 +100,7 @@
                     }
 
                     &__playlists {
-                        width: 157px;
+                        width: 140px;
                         height: 24px;
                         transition: 0.4s;
 
@@ -110,7 +110,7 @@
                     }
 
                     &__text {
-                        width: 157px;
+                        width: 140px;
                         height: 24px;
                         white-space: nowrap;
                         overflow: hidden;
@@ -125,7 +125,7 @@
 
                 @include desctop() {
                     row-gap: 30px;
-                    padding: 40px 0 0 40px;
+                    padding: 40px 10px 0 40px;
                 }
             }
         }

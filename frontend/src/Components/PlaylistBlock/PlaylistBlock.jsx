@@ -5,7 +5,7 @@ import { playlists } from "../../Playlists/playlists"
 import Playlist from "./Block/Playlist";
 import "./style/PlaylistBlock.css";
 import AddPlaylistImage from "./Assets/AddPlaylistImage";
-import { PlaylistContext } from "../../Contents/MusicsContents/AddPlaylistContext";
+import { PlaylistContext } from "../../Contents/AddPlaylistContext";
 
 const PlaylistBlock = () => {
     const generatePlaylist = playlists.map((elem, index) => {

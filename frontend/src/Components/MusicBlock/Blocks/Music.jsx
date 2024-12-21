@@ -5,7 +5,7 @@ import DeleteMusic from "../../AssetsBlocks/MusicBlock/DeleteMusic";
 import PlayMusic from "../../AssetsBlocks/MusicBar/NavigationMusic/MusicPlay";
 import StopMusic from "../../AssetsBlocks/MusicBar/NavigationMusic/StopMusic";
 import ThreePoints from "../../AssetsBlocks/MusicBlock/ThreePoints";
-import { MusicsContents } from "../../../Contents/MusicsContents/MusicsContents";
+import { MusicsContents } from "../../../Contents/MusicsContents";
 
 const Music = ({ musicName, author, id }) => {
     const { index, setIndex, play, setPlay } = useContext(MusicsContents);

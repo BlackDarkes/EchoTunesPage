@@ -1,0 +1,115 @@
+@import "../../../style/App.scss";
+
+.playlistMusic {
+    height: 100vh;
+    width: 100vw;
+    color: var(--white);
+
+    &__block {
+        height: 100%;
+        width: 100%;
+
+        .playlist {
+            display: flex;
+            justify-content: flex-start;
+            column-gap: 130px;
+            row-gap: 40px;
+            padding: 150px 140px;
+            width: 100%;
+            height: 100%;
+
+            .back {
+                position: fixed;
+                top: 50px;
+                left: 80px;
+                color: inherit;
+
+                @include tabs() {
+                    left: 40px;
+                }
+
+                @include mobile() {
+                    left: 20px;
+                }
+            }
+
+            .threePoints {
+                position: fixed;
+                top: 50px;
+                right: 80px;
+                color: inherit;
+
+                @include tabs() {
+                    right: 40px;
+                }
+
+                @include mobile() {
+                    right: 20px;
+                }
+            }
+
+            .musics {
+                flex: 0 1 auto;
+                width: 80%;
+
+                @include tabs() {
+                    width: 100%;
+                    max-height: calc(100% - 200px);
+                    overflow-y: auto;
+                }
+            }
+
+            &-information {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                row-gap: 50px;
+
+                .text-block {
+                    display: inherit;
+                    flex-direction: inherit;
+                    align-items: inherit;
+                    width: 100%;
+                    row-gap: 30px;
+
+                    &__name {
+                        font-weight: 600;
+                        max-width: 210px;
+                        text-align: center;
+
+                        @include tabs() {
+                            max-width: 100%;
+                        }
+                    }
+
+                    &__about {
+                        font-size: 14px;
+                    }
+
+                    @include mobile() {
+                        row-gap: 10px;
+                    }
+                }
+
+                @include tabs() {
+                    row-gap: 0;
+                }
+            }
+
+            @include laptop() {
+                column-gap: 30px;
+                padding-inline: 80px;
+            }
+
+            @include tabs() {
+                flex-direction: column-reverse;
+                padding-top: 80px;
+            }
+
+            @include mobile() {
+                padding-inline: 20px;
+                row-gap: 40px;
+            }
+        }
+    }
+}
