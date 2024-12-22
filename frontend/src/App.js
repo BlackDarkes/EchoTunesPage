@@ -11,15 +11,15 @@ import PageNotFound from "./Pages/PageNotFound/PageNotFoun";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/EchoTunesPage",
     element: <EchoTunes/>
   },
   {
-    path: "/playlists",
+    path: "/EchoTunesPage/playlists",
     element: <PlaylistPage/>
   },
   {
-    path: "/playlists/music/:index",
+    path: "/EchoTunesPage/playlists/music/:index",
     element: <PlaylistMusic/>
   },
   {

@@ -42,10 +42,10 @@ const MobileAsideBlock = ({home, library, active}) => {
             <div className="mobileAsideBlock__block">
                 <div className="mobileAside">
                     <div className="mobileAside-navigation">
-                        <Link className={[home].join(" ")} to="/">
+                        <Link className={[home].join(" ")} to="/EchoTunesPage">
                             <Button image={<Home/>} text={"Главная"} />
                         </Link>
-                        <Link className={[library].join(" ")} to="/playlists">
+                        <Link className={[library].join(" ")} to="/EchoTunesPage/playlists">
                             <Button image={<Labrary/>} text={"Библиотека"}/>
                         </Link>
                     </div>

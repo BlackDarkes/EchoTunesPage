@@ -13,7 +13,7 @@ const PlaylistMusic = () => {
             <section className="playlistMusic">
                 <div className="playlistMusic__block">
                     <div className="playlist">
-                        <Link to="/" className="back"><Back/></Link>
+                        <Link to="/EchoTunesPage" className="back"><Back/></Link>
                         <button className="threePoints"><ThreePoints/></button>
                         <div className="musics">
                             <MusicBlock/>

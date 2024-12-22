@@ -6,10 +6,10 @@ import LabraryMobile from "../../AssetsBlocks/AsideBlock/Mobile/LabraryMobile";
 const AsideBlockMobile = ({home, library}) => {
     return (
         <div className="mobile">
-            <Link to="/" className={[home].join(" ")}>
+            <Link to="/EchoTunesPage" className={[home].join(" ")}>
                 <HomeMobile/>
             </Link>
-            <Link to="/playlists" className={[library].join(" ")}>
+            <Link to="/EchoTunesPage/playlists" className={[library].join(" ")}>
                 <LabraryMobile/>
             </Link>
         </div>

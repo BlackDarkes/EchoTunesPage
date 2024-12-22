@@ -47,10 +47,10 @@ const AsideBlock = ({home, library}) => {
                 <div className="aside">
                     <div className="aside-navigation">
                         <h1 className="aside-navigation__title">EchoTunes</h1>
-                        <Link className={[home].join(" ")} to="/">
+                        <Link className={[home].join(" ")} to="/EchoTunesPage">
                             <Button image={<Home/>} text={"Главная"} />
                         </Link>
-                        <Link className={[library].join(" ")} to="/playlists">
+                        <Link className={[library].join(" ")} to="/EchoTunesPage/playlists">
                             <Button image={<Labrary/>} text={"Библиотека"}/>
                         </Link>
                     </div>
